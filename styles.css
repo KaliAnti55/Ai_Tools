@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d0d1a;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #00eaff;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+    margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.tool-card {
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #00eaff;
+}
+
+.tool-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.5);
+}
+
+.tool-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.tool-card p {
+    color: #b0b0cc;
+    font-size: 1rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #1a1a2e;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    border: 2px solid #00eaff;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close-btn {
+    float: right;
+    font-size: 2rem;
+    color: #00eaff;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ff007a;
+}
+
+.modal-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00eaff;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #b0b0cc;
+    margin-bottom: 20px;
+}
+
+.modal-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00eaff;
+    color: #0d0d1a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.modal-content a:hover {
+    background: #ff007a;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    .tool-card { padding: 15px; }
+    .modal-content { padding: 20px; }
+}
+.tool-card {
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #00eaff;
+}
+
+.tool-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.5);
+}
+
+/* Special Card Styles for Grok */
+.special-card {
+    border: 2px solid #ff007a; /* Pink border to stand out */
+    box-shadow: 0 0 15px rgba(255, 0, 122, 0.7), 0 0 30px rgba(0, 234, 255, 0.5); /* Dual glow: pink and cyan */
+    animation: pulse 2s infinite ease-in-out; /* Pulsating effect */
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 15px rgba(255, 0, 122, 0.7), 0 0 30px rgba(0, 234, 255, 0.5); }
+    50% { box-shadow: 0 0 25px rgba(255, 0, 122, 1), 0 0 40px rgba(0, 234, 255, 0.8); }
+    100% { box-shadow: 0 0 15px rgba(255, 0, 122, 0.7), 0 0 30px rgba(0, 234, 255, 0.5); }
+}
+
+.special-card:hover {
+    transform: translateY(-15px); /* Slightly larger hover lift */
+    box-shadow: 0 0 30px rgba(255, 0, 122, 1), 0 0 50px rgba(0, 234, 255, 0.8);
+}
+
+.tool-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.tool-card p {
+    color: #b0b0cc;
+    font-size: 1rem;
+}
+/* Badge Styles */
+.badge {
+    font-size: 0.8rem;
+    background: #ff007a; /* Pink background to match the special-card theme */
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+    box-shadow: 0 0 5px rgba(255, 0, 122, 0.7);
+    animation: badgeGlow 1.5s infinite ease-in-out;
+}
+
+@keyframes badgeGlow {
+    0% { box-shadow: 0 0 5px rgba(255, 0, 122, 0.7); }
+    50% { box-shadow: 0 0 10px rgba(255, 0, 122, 1); }
+    100% { box-shadow: 0 0 5px rgba(255, 0, 122, 0.7); }
+}
+/* Add these styles to your existing styles.css */
+
+/* Tool Header (to align logo and title) */
+.tool-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and title */
+    margin-bottom: 10px;
+}
+
+/* Logo Styles */
+.tool-logo {
+    width: 50px; /* Uniform width */
+    height: 50px; /* Uniform height */
+    object-fit: contain; /* Ensures logos scale properly */
+    border-radius: 5px; /* Optional: slight rounding */
+}
+
+/* Adjust existing .tool-card padding if needed */
+.tool-card {
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #00eaff;
+}
+
+/* Ensure badge aligns nicely with logo and title */
+.badge {
+    font-size: 0.8rem;
+    background: #ff007a;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+    box-shadow: 0 0 5px rgba(255, 0, 122, 0.7);
+    animation: badgeGlow 1.5s infinite ease-in-out;
+}
+/* Add these styles to the end of your existing styles.css */
+
+/* Footer Styles */
+.footer {
+    background: #1a1a2e; /* Matches card background */
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #00eaff; /* Cyan border for consistency */
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    color: #b0b0cc; /* Light gray text */
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+    text-shadow: 0 0 5px rgba(0, 234, 255, 0.3); /* Subtle glow */
+}
+
+/* Ensure the body and container allow the footer to sit at the bottom */
+body {
+    background: #0d0d1a;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh; /* Ensures body takes full viewport height */
+    display: flex;
+    flex-direction: column; /* Allows footer to push to bottom */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    flex: 1; /* Makes container take available space, pushing footer down */
+}
+/* Add these styles to your existing styles.css, after the existing modal styles */
+
+/* Welcome Modal (inherits from .modal and .modal-content) */
+#welcomeModal .modal-content {
+    background: #1a1a2e;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    border: 2px solid #00eaff;
+    animation: fadeIn 0.3s ease;
+    text-align: center;
+}
+
+#welcomeModal h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00eaff;
+    margin-bottom: 15px;
+}
+
+#welcomeModal p {
+    color: #b0b0cc;
+    margin-bottom: 20px;
+}
+
+#welcomeModal a {
+    color: #00eaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#welcomeModal a:hover {
+    color: #ff007a;
+}
+
+#welcomeModal .close-btn {
+    float: right;
+    font-size: 2rem;
+    color: #00eaff;
+    cursor: pointer;
+}
+
+#welcomeModal .close-btn:hover {
+    color: #ff007a;
+}
+
+/* OK Button */
+#welcomeOkBtn {
+    padding: 10px 20px;
+    background: #00eaff;
+    color: #0d0d1a;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#welcomeOkBtn:hover {
+    background: #ff007a;
+    color: #fff;
+}
