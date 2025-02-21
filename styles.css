@@ -292,18 +292,18 @@ body {
 }
 
 #welcomeModal p {
-    color: #b0b0cc;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 #welcomeModal a {
-    color: #00eaff;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 #welcomeModal a:hover {
-    color: #ff007a;
+    color: #000000;
 }
 
 #welcomeModal .close-btn {
@@ -332,4 +332,172 @@ body {
 #welcomeOkBtn:hover {
     background: #ff007a;
     color: #fff;
+}
+
+#blog-posts {
+    margin: 20px;
+}
+article {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+article h2 {
+    color: #333;
+}
+article small {
+    color: #666;
+    font-style: italic;
+}
+article p {
+    color: #000;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: #0f0f1a; /* Dark futuristic background */
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00eaff; /* Neon cyan */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Navigation Styles */
+nav {
+    background: #1a1a2e; /* Darker shade for nav */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #00eaff; /* Neon cyan */
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff007a; /* Neon pink on hover */
+}
+
+/* Blog Posts Styles */
+#blog-posts {
+    margin: 20px;
+}
+
+article {
+    background: #1a1a2e;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #00eaff;
+    border-radius: 10px;
+}
+
+article h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00eaff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+article small {
+    font-family: 'Roboto', sans-serif;
+    color: #b0b0cc;
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #1a1a2e;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Modal Styles (for index.html) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #1a1a2e;
+    padding: 20px;
+    border: 1px solid #00eaff;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close-btn {
+    float: right;
+    font-size: 1.5rem;
+    color: #ff007a;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00eaff;
+}
+
+.modal-content p {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.modal-content a, .modal-content button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #00eaff;
+    color: #0f0f1a;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content a:hover, .modal-content button:hover {
+    background: #ff007a;
+    color: #fff;
+}
+
+/* Placeholder for tools-grid (assuming dynamic content via JS) */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
