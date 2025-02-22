@@ -145,6 +145,7 @@ let aiTools = [
     {
         name: "Deepseek",
         description: "DeepSeek-V3 achieves a significant breakthrough in inference speed over previous models.",
+        link: "https://chat.deepseek.com/",
         logo: "https://www.deepseek.com/_next/image?url=https%3A%2F%2Fcdn.deepseek.com%2Flogo.png&w=1920&q=75"
     },
     {
